@@ -12,15 +12,3 @@ Kapalı devre çalışır. 2024 yılı için resmi tatiller yoktur.
 # raporlama
 Yıl sonunda Calisanlar.json dosyasını başlangıç haline geri getirmeniz gerekmektedir. Raporlama için ilgili json dosyasını kayıt altına alınız.
 nobetler.json dosyası yıl bazlı olarak kayıtları tutmaya devam etmektedir.
-
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
