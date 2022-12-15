@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "moment": "^2.29.4",
+    "node-fetch": "^3.3.0"
+  }
+}
