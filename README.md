@@ -4,10 +4,10 @@ Nönet dağıtım işlemi tamamlandıktan sonra excel dosyası olarak ilgili nö
 Kapalı devre çalışır. 2024 yılı için resmi tatiller yoktur.
 
 # kurallar
-Her çalışan her ay için en fazla 1 haftasonu nöbeti tutabilir.
-Yıllık izinde olan çalışanlara nöbet yazılmaz.
-Nöbet tarihleri arasından en az 7 gün olmalıdır.
-Yıllık nöbet sayısı adil şekilde dağıtılmalıdır.
+*Her çalışan her ay için en fazla 1 haftasonu nöbeti tutabilir.
+*Yıllık izinde olan çalışanlara nöbet yazılmaz.
+*Nöbet tarihleri arasından en az 7 gün olmalıdır.
+*Yıllık nöbet sayısı adil şekilde dağıtılmalıdır.
 
 # raporlama
 Yıl sonunda Calisanlar.json dosyasını başlangıç haline geri getirmeniz gerekmektedir. Raporlama için ilgili json dosyasını kayıt altına alınız.
