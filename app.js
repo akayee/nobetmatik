@@ -1,11 +1,11 @@
 
 import fetch from "node-fetch";
-import baslangicbitistarihi from "./baslangicbitistarihi.json" assert { type: "json" };
+import baslangicbitistarihi from "./baslangicbitistarihi.json"
 import fs from "fs";
 import moment from 'moment';
-import DosyadakiNobetler from "./nobetler.json" assert { type: "json" };
-import DosyadakiCalisanlar from "./Calisanlar.json" assert { type: "json" };
-import DosyadakiResmiTatiller from "./resmiTatiller.json" assert { type: "json" };
+import DosyadakiNobetler from "./nobetler.json"
+import DosyadakiCalisanlar from "./Calisanlar.json"
+import DosyadakiResmiTatiller from "./resmiTatiller.json"
 import { createObjectCsvWriter } from 'csv-writer'
 
 let TumCalisanlar = DosyadakiCalisanlar
