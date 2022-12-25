@@ -105,6 +105,10 @@ function checkRuleBreakerWorked(date, user, dayCount) {
     console.log("KURAL BOZULDUUUUUUUUUUU");
     if (moment(date).diff(moment(user.sonNobet, "DD-MM-YYYY"), "days") < dayCount) {
         return true
+    } else if (moment(date).day() === 0 || moment(date).day() === 6) {
+        if (moment(user.cumartesiNobetTarihi).month() === moment(date).month() || moment(user.pazarNobetTarihi).month() === moment(date).month()) {
+            return true
+        }
     } else {
         return false
     }
