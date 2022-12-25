@@ -71,8 +71,8 @@ function setNobetYerlestir(user, date, resmiTatil, workDay) {
     resmiTatil !== undefined ? updatedUserInfo = { ...updatedUserInfo, resmiTatilNobetSayisi: parseInt(updatedUserInfo.resmiTatilNobetSayisi) + 1 } : null
     workDay === "Persembe" ? updatedUserInfo = { ...updatedUserInfo, persembeNobetSayisi: parseInt(updatedUserInfo.persembeNobetSayisi) + 1 } : null
     workDay === "Cuma" ? updatedUserInfo = { ...updatedUserInfo, cumaNobetSayisi: parseInt(updatedUserInfo.cumaNobetSayisi) + 1 } : null
-    workDay === "Cumartesi" ? updatedUserInfo = { ...updatedUserInfo, cumartesiNobetSayisi: parseInt(updatedUserInfo.cumartesiNobetSayisi) + 1 } : null
-    workDay === "Pazar" ? updatedUserInfo = { ...updatedUserInfo, pazarNobetSayisi: parseInt(updatedUserInfo.pazarNobetSayisi) + 1 } : null
+    workDay === "Cumartesi" ? updatedUserInfo = { ...updatedUserInfo, cumartesiNobetSayisi: parseInt(updatedUserInfo.cumartesiNobetSayisi) + 1 ,cumartesiNobetTarihi:momentDate} : null
+    workDay === "Pazar" ? updatedUserInfo = { ...updatedUserInfo, pazarNobetSayisi: parseInt(updatedUserInfo.pazarNobetSayisi) + 1 , pazarNobetTarihi:momentDate} : null
     TumCalisanlar[user.sicil] = updatedUserInfo
     let updatedArray = Nobetler[momentDate.year()][momentDate.month()]
     updatedArray.push(user.sicil)
@@ -93,7 +93,7 @@ function checkAlreadyWorked(date, user) {
     if (moment(date).diff(moment(user.sonNobet, "DD-MM-YYYY"), "days") < 8) {
         return true
     } else if (moment(date).day() === 0 || moment(date).day() === 6) {
-        if (parseInt(user.pazarNobetSayisi) + parseInt(user.cumartesiNobetSayisi) >= ((moment(date).month() + 5)%12) +1) {
+        if (moment(user.cumartesiNobetTarihi).month() === moment(date).month() || moment(user.pazarNobetTarihi).month() === moment(date).month()) {
             return true
         }
     } else {
@@ -105,10 +105,6 @@ function checkRuleBreakerWorked(date, user, dayCount) {
     console.log("KURAL BOZULDUUUUUUUUUUU");
     if (moment(date).diff(moment(user.sonNobet, "DD-MM-YYYY"), "days") < dayCount) {
         return true
-    } else if (moment.day() === 0 || moment.day() === 6) {
-        if (parseInt(user.pazarNobetSayisi) + parseInt(user.cumartesiNobetSayisi) >= ((moment(date).month() + 5)%12) +1) {
-            return true
-        }
     } else {
         return false
     }
